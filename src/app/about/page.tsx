@@ -47,12 +47,11 @@ export default function AboutPage() {
 
               <div className="w-full lg:w-3/5 lg:px-3">
                 <p className="text-md mt-4 lg:mt-0 text-justify md:text-left text-sm">
-                  "We pride ourselves on delivering exceptional plumbing services tailored to your needs. With 5 years of experience, our skilled technicians provide efficient solutions for everything
+                  We pride ourselves on delivering exceptional plumbing services tailored to your needs. With 5 years of experience, our skilled technicians provide efficient solutions for everything
                   from minor leaks to complete installations. We focus on customer satisfaction, offering prompt service with transparent pricing. Trust us to keep your plumbing systems running
-                  smoothly—your comfort is our priority."
+                  smoothly—your comfort is our priority.
                 </p>
               </div>
-
               {/* <div className="w-full lg:w-1/5 mt-6 lg:mt-0 lg:px-4 text-center md:text-left">
                 <button className="bg-white hover:bg-grey-darker hover:text-white border border-solid border-grey w-1/3 lg:w-full py-2">Visit now</button>
               </div> */}

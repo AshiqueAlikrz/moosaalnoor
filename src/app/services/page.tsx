@@ -7,7 +7,7 @@ import KitchenDesign from "../../assets/kitchen-with-small-space-modern-design_2
 import HospitalDesign from "../../assets/clinic1.jpg";
 import Exhibition from "../../assets/exhibition.jpg";
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Ac from "../../assets/services/ac.jpg";
 import Plaster from "../../assets/services/plastring.jpg";
@@ -72,7 +72,7 @@ export default function ServicePage() {
 
   const [selectedTab, setSelectedTab] = useState(servicesData[0]);
   const ref = useRef(null);
-  const isInViewText = useInView(ref);
+  const isInViewText = useInView(ref);  
 
   return (
     <div className="w-full h-screen md:min-h-[80vh] lg:min-h-screen p-6 md:p-10 flex flex-col items-center justify-center bg-cover bg-center">
