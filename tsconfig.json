@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "allowJs": false,                // Disable JS files for type checking in TypeScript
+    "skipLibCheck": true,            // Skip type checking of declaration files for faster builds
+    "strict": true,                  // Enable all strict type checking options
+    "noEmit": false,                 // Allow emitting files even when there are errors
+    "esModuleInterop": true,         // Ensures compatibility with ES6 modules
+    "module": "esnext",              // Use ES modules in bundlers
+    "moduleResolution": "bundler",   // Use the bundler resolution strategy for modules
+    "resolveJsonModule": true,       // Allow importing JSON files as modules
+    "isolatedModules": true,         // Ensures each file can be transpiled independently
+    "jsx": "preserve",               // Preserve JSX syntax for Next.js to handle
+    "incremental": true,             // Enable incremental compilation for faster builds
     "plugins": [
       {
         "name": "next"
@@ -19,8 +19,20 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "noImplicitAny": true,           // Disallow variables with 'any' type
+    "noUnusedLocals": true,          // Ensures there are no unused local variables
+    "noUnusedParameters": true,      // Ensures there are no unused function parameters
+    "noImplicitReturns": true,       // Ensures all functions have an explicit return type
+    "strictNullChecks": true,        // Ensures proper handling of null and undefined
+    "forceConsistentCasingInFileNames": true, // Ensures consistent file naming casing
+    "noEmitOnError": false           // Allow build even with type errors
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
