@@ -19,7 +19,7 @@ const Feature = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen ">
       <motion.h1
-        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-sky-900 mt-6 sm:mt-8 md:mt-10"
+        className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-sky-900 mt-4 sm:mt-8 md:mt-10"
         variants={titleVariant}
         initial="hidden"
         animate="visible"
