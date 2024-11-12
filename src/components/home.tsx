@@ -57,12 +57,12 @@ export default function TeamExample() {
         },
       }}
     >
-      <ImagesSlider className="h-screenn -z-40" images={images}>
-        <div className="flex flex-col items-center justify-center h-full absolute top-0 left-0 right-0 z-50">
+      <ImagesSlider className="h-screen -z-40" images={images}>
+        <div className="flex flex-col items-center justify-center h-full absolute inset-0 z-50">
           <TypewriterEffect words={words} />
-          <div className="flex flex-col space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10 justify-center items-center">
+          <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-4 mt-10 justify-center items-center">
             <motion.h2
-              className="text-white text-3xl font-bold mb-4"
+              className="text-white text-2xl md:text-3xl font-bold mb-4 text-center"
               initial="hidden"
               animate="visible"
               variants={headingVariants}
@@ -71,7 +71,7 @@ export default function TeamExample() {
               Your Ultimate Solution Awaits.
             </motion.h2>
             <motion.button
-              className="w-40 h-10 rounded-xl hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
+              className="w-32 md:w-40 h-10 rounded-xl hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
               initial="hidden"
               animate="visible"
               variants={buttonVariants}

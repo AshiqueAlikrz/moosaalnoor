@@ -21,8 +21,8 @@ const servicesDescription =
 
 export default function AboutPage() {
   return (
-    <div className="container  h-screen mx-auto flex justify-center items-center flex-col  md:p-0 gap-3">
-      <h1 className="text-4xl font-bold text-sky-900 mb-4">What the Owner Says :</h1>
+    <div className="container  min-h-screen mx-auto flex justify-center items-center flex-col p-6 md:p-0 gap-3">
+      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-sky-900 mb-4">What the Owner Says:</h1>
       <div className="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto h-4/6">
         <div
           className="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative"

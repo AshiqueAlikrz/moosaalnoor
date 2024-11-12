@@ -31,7 +31,7 @@ export default function Media() {
     <section id="about" className="relative h-screen bg-gradient-to-b from-black to-gray-800 text-white">
       <div className="container   h-full flex items-center ">
         <div className="flex flex-wrap w-full h-full ">
-          <div className="w-full  flex md:w-5/12 h-full overflow-hidden" data-aos="fade-right">
+          <div className="hidden w-full  md:flex md:w-5/12 h-full overflow-hidden " data-aos="fade-right">
             <Image
               alt="Technical Services"
               className="h-full w-full rounded-lg object-cover" // Full height and object cover to fill the div
@@ -44,7 +44,7 @@ export default function Media() {
             />
           </div>
 
-          <div className="w-full md:w-5/12 h-full flex items-center ml-auto mr-auto px-4" data-aos="fade-left">
+          <div className="w-full md:w-5/12 h-full flex items-center ml-auto mr-auto px-4 " data-aos="fade-left">
             <div className="md:pr-12">
               <h3 className="text-4xl uppercase font-bold">Professional Technical Solutions</h3>
               <p className="mt-4 text-lg leading-relaxed">
