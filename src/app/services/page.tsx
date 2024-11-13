@@ -8,15 +8,19 @@ import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Ac from "../../assets/services/ac.jpg";
 import Plaster from "../../assets/services/plastring.jpg";
-import WallTiling from "../../assets/services/wall tailing.jpg";
+import WallTiling from "../../assets/services/floorandtailing.jpg";
 import Plumbing from "../../assets/services/plumbing-professional-doing-his-job.jpg";
-import FalseCeiling from "../../assets/services/false ceiling.webp";
+import FalseCeiling from "../../assets/services/falseceleingnew.jpg";
 import Painting from "../../assets/services/paitning.webp";
 import Renovation from "../../assets/services/rennovation.jpg";
 import Carpentry from "../../assets/services/carpentry.jpg";
 
 const cardData = [
-  { title: "Plumbing & Sanitary Services", description: "Expert plumbing services ensuring optimal water flow and sanitation, along with professional sanitary installations to enhance your bathroom experience.", imageUrl: Plumbing.src },
+  {
+    title: "Plumbing & Sanitary Services",
+    description: "Expert plumbing services ensuring optimal water flow and sanitation, along with professional sanitary installations to enhance your bathroom experience.",
+    imageUrl: Plumbing.src,
+  },
   { title: "Plaster Work", description: "Quality plaster work to give your walls a smooth and flawless finish.", imageUrl: Plaster.src },
   { title: "Floor & Wall Tiling Works", description: "Precision floor and wall tiling works for an elegant and modern look.", imageUrl: WallTiling.src },
   { title: "False Ceiling & Light Partitions Installation", description: "Creative false ceiling designs and light partitions for enhanced aesthetics.", imageUrl: FalseCeiling.src },
@@ -45,12 +49,7 @@ export default function ServicePage() {
   return (
     <div className="w-full min-h-screen p-6 md:p-10 flex flex-col items-center justify-center bg-cover bg-center">
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-sky-900 mb-6">Dedicated Technical Services</h1>
-      <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl" variants={containerVariants} initial="hidden" animate="visible">
         {cardData.map((card, index) => (
           <motion.div
             key={index}

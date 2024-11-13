@@ -8,8 +8,11 @@ import { TypewriterEffect } from "../components/ui/typewriter-effect";
 import Bg2 from "../../public/images/bg1.jpg";
 import Bg1 from "../../public/images/2bg.jpg";
 import Bg3 from "../../public/images/3bg.jpg";
+import { useRouter } from "next/navigation";
 
 export default function TeamExample() {
+  const router = useRouter();
+
   const words = [
     {
       text: "Best",
@@ -71,11 +74,12 @@ export default function TeamExample() {
               Your Ultimate Solution Awaits.
             </motion.h2>
             <motion.button
-              className="w-32 md:w-40 h-10 rounded-xl hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
+              className="w-32 md:w-40 h-10 cursor-pointer rounded-xl hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
               initial="hidden"
               animate="visible"
               variants={buttonVariants}
               transition={{ duration: 0.5, delay: 2.5 }} // Delay to show button after heading
+              onClick={() => router.push("/contact")}
             >
               Let’s Connect!
             </motion.button>

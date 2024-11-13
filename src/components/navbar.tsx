@@ -26,8 +26,13 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact", "Services", "Media"];
-
+const navItems = [
+  { heading: "Home", navigate: "" },
+  { heading: "About", navigate: "about" },
+  { heading: "Contact", navigate: "contact" },
+  { heading: "Services", navigate: "services" },
+  { heading: "Media", navigate: "media" },
+];
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -53,10 +58,10 @@ export default function DrawerAppBar(props: Props) {
       </Box>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding sx={{ fontFamily: "Poppins !important" }}>
-            <ListItemButton href={`/${item.toLowerCase()}`} sx={{ textAlign: "left" }}>
-              <ListItemText primary={item} sx={{ fontFamily: "Poppins !important" }} />
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding sx={{ fontFamily: "Poppins !important" }}>
+            <ListItemButton href={`/${item.navigate}`} sx={{ textAlign: "left" }}>
+              <ListItemText primary={item.heading} sx={{ fontFamily: "Poppins !important" }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,9 +100,19 @@ export default function DrawerAppBar(props: Props) {
               alignItems: "center",
             }}
           >
-            {navItems.map((item) => (
-              <Button key={item} href={`/${item.toLowerCase()}`} sx={{ color: "#fff" }}>
-                {item}
+            {navItems.map((item, index) => (
+              <Button
+                key={index}
+                href={`/${item.navigate}`}
+                sx={{
+                  color: "#fff",
+                  fontFamily: "monospace",
+                  "&:hover": {
+                    color: "yellow", // Apply yellow background on hover
+                  },
+                }}
+              >
+                {item.heading}
               </Button>
             ))}
           </Box>

@@ -11,18 +11,18 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const services = [
   {
     id: 1,
+    title: "Custom Curtains",
     icon: <FaLongArrowAltRight className="fa-2x text-orange-500" />,
-    title: "Expert Plumbing Services",
   },
   {
     id: 2,
+    title: "Sofa Upholstery",
     icon: <FaLongArrowAltRight className="fa-2x text-orange-500" />,
-    title: "Ceiling Installations",
   },
   {
     id: 3,
+    title: "Carpet Installation",
     icon: <FaLongArrowAltRight className="fa-2x text-orange-500" />,
-    title: "Maintenance and Repair Services",
   },
 ];
 
@@ -43,13 +43,12 @@ export default function Media() {
               objectPosition="center" // Centers the image within the div
             />
           </div>
-
           <div className="w-full md:w-5/12 h-full flex items-center ml-auto mr-auto px-4 " data-aos="fade-left">
             <div className="md:pr-12">
-              <h3 className="text-4xl uppercase font-bold">Professional Technical Solutions</h3>
+              <h3 className="text-4xl uppercase font-bold">Professional Home Furnishing Services</h3>
               <p className="mt-4 text-lg leading-relaxed">
-                We specialize in providing high-quality technical services, including plumbing and ceiling installations, tailored to meet the diverse needs of our clients. Our expert team is
-                dedicated to delivering exceptional results with a focus on safety and efficiency.
+                We specialize in providing high-quality home furnishing services, including custom curtains, sofas, and carpets. Our expert team is dedicated to delivering exceptional results with a
+                focus on style and comfort.
               </p>
               <ul className="list-none mt-6">
                 {services.map((service) => (

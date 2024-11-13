@@ -18,6 +18,9 @@ const Footer = () => {
               <li>Air Conditioning Solutions</li>
               <li>Painting Contracting</li>
               <li>Wall Tiling Works</li>
+              <li>Curtain</li>
+              <li>Sofa</li>
+              <li>Carpets</li>
             </ul>
           </div>
           <div className="mb-4 md:mb-0">

@@ -21,7 +21,7 @@ const servicesDescription =
 
 export default function AboutPage() {
   return (
-    <div className="container  min-h-screen mx-auto flex justify-center items-center flex-col p-6 md:p-0 gap-3">
+    <div className="container  md:h-screen min-h-screen mx-auto flex justify-center items-center flex-col p-6 md:p-0 gap-3">
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-sky-900 mb-4">What the Owner Says:</h1>
       <div className="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto h-4/6">
         <div
@@ -40,7 +40,7 @@ export default function AboutPage() {
           <div className="h-full mx-auto px-6 md:px-0 md:pt-6 md:-ml-6 relative">
             <div className="bg-white  lg:h-full p-6 -mt-6 md:mt-0 relative mb-4 md:mb-0 flex flex-wrap gap-10 md:flex-wrap items-center">
               <div className="w-full lg:w-1/5 lg:border-right lg:border-solid text-center md:text-center">
-                <h3 className="text-lg">- Moosa Al Noor</h3>
+                <h3 className="text-lg font-semibold">- Moosa Maliyekkal</h3>
                 <p className="mb-0 mt-3 text-gray-500 text-sm">Dubai</p>
                 <hr className="w-1/4 md:ml-0 mt-4 border lg:hidden" />
               </div>
