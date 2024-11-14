@@ -3,7 +3,7 @@ import ModernInteriorDesign from "../../assets/modern-interior-design-grey-livin
 import KitchenDesign from "../../assets/kitchen-with-small-space-modern-design_23-2150710611.jpg";
 import HospitalDesign from "../../assets/clinic1.jpg";
 import Exhibition from "../../assets/exhibition.jpg";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Ac from "../../assets/services/ac.jpg";
@@ -32,39 +32,46 @@ const cardData = [
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: {
+  visible: (delay) => ({
     opacity: 1,
+    y: 0,
     transition: {
-      staggerChildren: 0.15, // Delay between animations
+      delay,
+      duration: 0.6,
     },
-  },
+  }),
 };
 
 export default function ServicePage() {
   return (
-    <div className="w-full min-h-screen p-6 md:p-10 flex flex-col items-center justify-center bg-cover bg-center">
+    <div className="w-full min-h-screen p-6 md:p-28 flex flex-col items-center justify-center bg-cover bg-center">
       <h1 className="text-3xl sm:text-4xl font-bold text-center text-sky-900 mb-6">Dedicated Technical Services</h1>
-      <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl" variants={containerVariants} initial="hidden" animate="visible">
-        {cardData.map((card, index) => (
-          <motion.div
-            key={index}
-            className={cn("relative rounded-md shadow-lg flex flex-col justify-end p-4 bg-cover bg-center h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80")}
-            style={{ backgroundImage: `url(${card.imageUrl})` }}
-            variants={cardVariants}
-          >
-            <div className="absolute w-full h-full top-0 left-0 bg-black opacity-50"></div>
-            <div className="text-white relative z-10">
-              <h2 className="text-lg sm:text-xl font-semibold">{card.title}</h2>
-              <p className="text-xs sm:text-sm">{card.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
+        {cardData.map((card, index) => {
+          const ref = useRef(null);
+          const isInView = useInView(ref, { once: true });
+          const delay = index * 0.3; // Delay each card by 0.3s
+
+          return (
+            <motion.div
+              key={index}
+              ref={ref}
+              className={cn("relative rounded-md shadow-lg flex flex-col justify-end p-4 bg-cover bg-center h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80")}
+              style={{ backgroundImage: `url(${card.imageUrl})` }}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={delay}
+              variants={cardVariants}
+            >
+              <div className="absolute w-full h-full top-0 left-0 bg-black opacity-50"></div>
+              <div className="text-white relative z-10">
+                <h2 className="text-lg sm:text-xl font-semibold">{card.title}</h2>
+                <p className="text-xs sm:text-sm">{card.description}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }

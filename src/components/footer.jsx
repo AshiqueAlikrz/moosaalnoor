@@ -8,7 +8,8 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <h4 className="font-bold text-lg mb-2">Moosa Al Noor</h4>
             <p>Your trusted partner for all technical services.</p>
-            <p className="mt-2">Contact us: info@moosalnoor.com</p>
+            <p className="mt-2 font-semibold">Contact us: moosamft@gmail.com</p>
+            <p className="mt-2 font-semibold">Phone no : 04 359 7435</p>
           </div>
           <div className="mb-4 md:mb-0">
             <h4 className="font-bold text-lg mb-2">Our Services</h4>

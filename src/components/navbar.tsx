@@ -31,7 +31,7 @@ const navItems = [
   { heading: "About", navigate: "about" },
   { heading: "Contact", navigate: "contact" },
   { heading: "Services", navigate: "services" },
-  { heading: "Media", navigate: "media" },
+  { heading: "Blog", navigate: "blog" },
 ];
 export default function DrawerAppBar(props: Props) {
   const { window } = props;

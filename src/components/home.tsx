@@ -53,15 +53,15 @@ export default function TeamExample() {
       sx={{
         position: "relative",
         height: "100vh",
-        overflowY: "scroll",
+        overflowY: "hidden",
         scrollSnapType: "y mandatory",
         "& > div": {
           scrollSnapAlign: "start",
         },
       }}
     >
-      <ImagesSlider className="h-screen -z-40" images={images}>
-        <div className="flex flex-col items-center justify-center h-full absolute inset-0 z-50">
+      <ImagesSlider className="h-screen -z-40 overflow-hidden" images={images}>
+        <div className="flex flex-col items-center justify-center h-full absolute inset-0 z-50 ">
           <TypewriterEffect words={words} />
           <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-4 mt-10 justify-center items-center">
             <motion.h2
