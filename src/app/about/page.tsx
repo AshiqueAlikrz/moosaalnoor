@@ -7,6 +7,7 @@ import CustomImageList from "@/components/imageView";
 import ScrollView from "@/components/scrollPreview";
 import CartoonBoy from "../../assets/cartoon-kid.png";
 import { motion } from "framer-motion";
+import Head from "next/head";
 // import AboutPageBg from '../../assets/top-view-curious-young-worker-uniform-with-hard-hat-pointing-up-right-side-isolated-red-wall.jpg'
 
 const teamImage = "https://via.placeholder.com/600x400?text=Our+Team"; // Placeholder image
@@ -22,6 +23,10 @@ const servicesDescription =
 export default function AboutPage() {
   return (
     <div className="container  md:h-screen min-h-screen mx-auto flex justify-center items-center flex-col p-6 md:p-0 gap-3">
+      <Head>
+        <title>About Moosa Al Noor | Expert Technical Services in Dubai</title>
+        <meta name="description" content="Learn about Moosa Al Noor, a trusted provider of technical services in Dubai, dedicated to quality and customer satisfaction." />
+      </Head>
       <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-sky-900 mb-4">What the Owner Says:</h1>
       <div className="shadow-lg flex flex-wrap w-full lg:w-4/5 mx-auto h-4/6">
         <div
