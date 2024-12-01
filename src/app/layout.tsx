@@ -9,8 +9,8 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Best Technical Service in Dubai",
-  description: "Best technical service in Dubai",
+  title: "Best Technical Services in Dubai - Moosa Al Noor",
+  description: "Best technical services in Dubai - Moosa Al Noor",
 };
 
 export default function RootLayout({
