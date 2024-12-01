@@ -32,6 +32,17 @@ export default function RootLayout({
           <meta property="og:description" content="Expert technical services in Dubai, specializing in repairs, maintenance, and installations." />
           <meta property="og:url" content="https://www.moosaalnoor.com" />
           <meta property="og:type" content="website" />
+
+          {/* Other meta tags */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "Organization",
+              name: "Moosa Al Noor",
+              url: "https://www.moosaalnoor.com",
+              logo: "https://www.moosaalnoor.com/favicon.ico",
+            })}
+          </script>
         </Head>
         <main>
           {children}
