@@ -81,7 +81,11 @@ export default function AboutPage() {
           <input type="email" placeholder="Email Address" className="border border-gray-200 text-gray-800 text-xs sm:text-sm rounded-lg block w-full p-3 focus:outline-none" />
           <input type="tel" placeholder="Contact Number" className="border border-gray-200 text-gray-800 text-xs sm:text-sm rounded-lg block w-full p-3 focus:outline-none" />
           <textarea rows="4" placeholder="Type Your Message..." className="border border-gray-200 text-gray-800 text-xs sm:text-sm rounded-lg block w-full p-3 focus:outline-none"></textarea>
-          <button type="submit" className="w-full bg-[#007bff] hover:bg-[#0069d9] active:bg-[#005cbf] text-white text-xs sm:text-sm font-semibold rounded-lg p-3">
+          <button
+            type="submit"
+            className="w-full bg-[#007bff] hover:bg-[#0069d9] active:bg-[#005cbf] text-white text-xs sm:text-sm font-semibold rounded-lg p-3"
+            onClick={() => alert("Your message has been sent successfully! The owner will reach out to you shortly.")}
+          >
             Submit Now
           </button>
         </form>

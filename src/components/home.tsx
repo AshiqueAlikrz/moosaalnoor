@@ -60,7 +60,7 @@ export default function TeamExample() {
         },
       }}
     >
-      <ImagesSlider className="h-screen -z-40 overflow-hidden" images={images}>
+      <ImagesSlider className="h-screen  overflow-hidden" images={images}>
         <div className="flex flex-col items-center justify-center h-full absolute inset-0 z-50 ">
           <TypewriterEffect words={words} />
           <div className="flex flex-col space-y-4 md:space-y-0 md:space-x-4 mt-10 justify-center items-center">
@@ -74,7 +74,7 @@ export default function TeamExample() {
               Your Ultimate Solution Awaits.
             </motion.h2>
             <motion.button
-              className="w-32 md:w-40 h-10 cursor-pointer rounded-xl hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
+              className="w-32 md:w-40 h-10 cursor-pointer rounded-xl hover:bg-white hover:text-black bg-black border dark:border-white border-transparent text-white text-sm"
               initial="hidden"
               animate="visible"
               variants={buttonVariants}

@@ -32,8 +32,7 @@ export default function AboutPage() {
         <div
           className="bg-cover bg-bottom border w-full md:w-1/3 h-64 md:h-auto relative"
           style={{
-            backgroundImage:
-              "url('https://img.freepik.com/free-photo/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated-background_662251-838.jpg?ga=GA1.1.2019140114.1709804061&semt=ais_hybrid')",
+            backgroundImage: "url('/images/moosakkaimage.jpg')",
           }}
         >
           <div className="absolute text-xl">
